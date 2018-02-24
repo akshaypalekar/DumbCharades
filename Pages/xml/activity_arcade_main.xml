@@ -1,0 +1,115 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/backgrd"
+    tools:context="com.example.yugandhara.dumbcharades.ArcadeMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@drawable/frame"
+            android:id="@+id/display_movie"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:textSize="30sp"/>
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/fetch_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/go"
+            android:onClick="fetchMovie"/>
+
+
+        <ImageButton android:id="@+id/change_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/changelang"
+            android:onClick="changeLanguage"/>
+
+        <RadioGroup
+            android:layout_gravity="center"
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/hindi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hindi" />
+
+                <RadioButton
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/bhojpuri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bhojpuri" />
+
+                <RadioButton
+                    android:id="@+id/random"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Random" />
+
+            </LinearLayout>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:background="@drawable/mm"
+                android:id="@+id/main_menu"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Main Menu"
+                android:onClick="mainMenu"/>
+
+            <ImageButton
+                android:background="@drawable/exit"
+                android:id="@+id/exit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:onClick="exit"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

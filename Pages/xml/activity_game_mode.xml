@@ -1,0 +1,264 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/backgrd"
+    tools:context="com.example.yugandhara.dumbcharades.GameMode">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Game Mode"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:background="#1d87be"/>
+
+        <TextView
+            android:text="Select No of Teams to Play"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+        <RadioGroup
+            android:id="@+id/no_of_teams"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:id="@+id/two_teams"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/three_teams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/four_teams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/team_one"
+            android:layout_gravity="center"
+            android:hint="Team A"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+
+
+            />
+
+        <EditText
+            android:id="@+id/team_two"
+            android:layout_gravity="center"
+            android:hint="Team B"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+
+            />
+
+        <EditText
+            android:id="@+id/team_three"
+            android:hint="Team C"
+            android:layout_gravity="center"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:visibility="gone"
+
+            />
+
+        <EditText
+            android:id="@+id/team_four"
+            android:hint="Team D"
+            android:layout_gravity="center"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:visibility="gone"
+
+            />
+
+
+        <TextView
+            android:text="Select Time Mode"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/game_time"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/not_timed"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Timed" />
+
+            <RadioButton
+                android:id="@+id/timed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timed" />
+
+        </RadioGroup>
+
+        <TextView android:id="@+id/select_time"
+            android:text="Select Time Duration"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/time_details"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/two_mins"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Minutes" />
+
+            <RadioButton
+                android:id="@+id/three_mins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 Minutes" />
+
+            <RadioButton
+                android:id="@+id/five_mins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 Minutes" />
+
+        </RadioGroup>
+
+        <TextView
+            android:text="Select a Language"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/language"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/hindi"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hindi" />
+
+            <RadioButton
+                android:id="@+id/english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="English" />
+
+            <RadioButton
+                android:id="@+id/bhojpuri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bhojpuri" />
+
+            <RadioButton
+                android:id="@+id/random"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Random" />
+
+        </RadioGroup>
+
+        <TextView
+            android:text="Select Difficulty Level"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/difficulty_level"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/easy"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy" />
+
+            <RadioButton
+                android:id="@+id/difficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Difficult" />
+
+        </RadioGroup>
+
+        <ImageButton
+            android:background="@drawable/startbutton"
+            android:id="@+id/start_game"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Game"
+            android:onClick="startGame"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
